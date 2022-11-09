@@ -1,0 +1,30 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "esbuild",
+        "description": "",
+        "uuid": "05254c05-c810-4fb0-aef5-b6c74def117a",
+        "version": [0, 0, 1],
+        "min_engine_version": [1, 17, 30]
+    },
+    "modules": [
+        {
+            "description": "GameTest module",
+            "language": "javascript",
+            "type": "script",
+            "uuid": "355005a6-3cc0-4c95-a493-8bcdd4f50c77",
+            "version": [1, 0, 0],
+            "entry": "scripts/main.js"
+        }
+    ],
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.0.0-beta"
+        },
+        {
+            "module_name": "@minecraft/server-ui",
+            "version": "1.0.0-beta"
+        }
+    ]
+}
