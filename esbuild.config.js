@@ -1,4 +1,4 @@
-const BPFolderName = "myFirstScript"; //Change to your Addons Name
+const BPFolderName = "loreEdit"; //Change to your Addons Name
 
 const [node, file, arg1] = process.argv;
 const esbuild = require("esbuild");
