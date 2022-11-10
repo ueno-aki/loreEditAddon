@@ -8,7 +8,7 @@ world.events.beforeItemUse.subscribe(async (ev) => {
         ev.cancel = true;
         await ShowMainMenu(item, source);
         const inventory = source.getComponent("inventory");
-        if (!(inventory && isInventory(inventory))) return;
+        if (!isInventory(inventory)) return;
         inventory.container.setItem(source.selectedSlot, item);
     }
 });
@@ -20,12 +20,16 @@ world.events.beforeChat.subscribe((ev) => {
         case "open":
             sender.addTag(EditorTag);
             sender.playSound("random.levelup");
-            sender.tell("§l編集機能を追加しました\n§r§7スニーク中に{§b右クリックor長押し§7}で開く\n[§b!close§7]で終了");
+            sender.tell(
+                "- ".repeat(20) +
+                    "\n§l編集機能を追加しました[loreEditAddon]\n§r§7スニーク中に{§b右クリックor長押し§7}で開く\n[§b!close§7]で終了\n" +
+                    "- ".repeat(20)
+            );
             break;
         case "close":
             sender.removeTag(EditorTag);
             sender.playSound("random.levelup");
-            sender.tell("§l終了しました");
+            sender.tell("§l終了しました[loreEditAddon]");
             break;
     }
     ev.cancel = true;

@@ -31,12 +31,8 @@ const ShowAddMenu = async (item: ItemStack, target: Player) => {
         .title("追加")
         .textField("説明文", "入力してね", "")
         .show(target);
-    if (!formValues || canceled) {
-        await ShowMainMenu(item, target);
-    } else {
-        itemLorePush(item, formValues[0]);
-        await ShowAddMenu(item, target);
-    }
+    if (formValues && !canceled) itemLorePush(item, formValues[0]);
+    await ShowMainMenu(item, target);
 };
 const ShowDeleteMenu = async (item: ItemStack, target: Player) => {
     const delMenu = new ActionFormData().title("削除").body("削除したいものを選択");
