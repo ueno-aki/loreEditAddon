@@ -4,7 +4,7 @@
         "name": "loreEdit",
         "description": "",
         "uuid": "ed6fe85f-8c9a-4313-8d92-ac6f5f58e423",
-        "version": [0, 0, 1],
+        "version": [0, 1, 0],
         "min_engine_version": [1, 17, 30]
     },
     "modules": [
@@ -20,7 +20,7 @@
     "dependencies": [
         {
             "module_name": "@minecraft/server",
-            "version": "1.0.0-beta"
+            "version": "1.1.0-beta"
         },
         {
             "module_name": "@minecraft/server-ui",
